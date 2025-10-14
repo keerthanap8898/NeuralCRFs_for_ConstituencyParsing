@@ -1,6 +1,6 @@
 # Neural CRFs for Constituency Parsing
 
-This repository implements a **Neural Conditional Random Field (CRF)** parser for **constituency parsing**, developed as part of **CSE 291E: Advanced Topics in NLP** at UC San Diego.
+This repository implements a **Neural Conditional Random Field (CRF)** parser for **constituency parsing**, developed as part of a cse project submission for 291E - **Advanced statistical NLP** at UC San Diego.
 
 It reproduces the log-space **inside algorithm** used for structured inference over all valid parse trees, integrated with **BiLSTM encoders** and **biaffine span scoring**.  
 The core focus is the **vectorized implementation** of the *inside* dynamic program using PyTorch tensors (`stripe`, `diagonal`, `logsumexp`).

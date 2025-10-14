@@ -1,0 +1,34 @@
+// NNS VBD VBN NN .
+digraph {
+	1 [label=TOP]
+	2 [label=S]
+	1 -> 2
+	3 [label=NP]
+	2 -> 3
+	4 [label=VP]
+	2 -> 4
+	5 [label="."]
+	2 -> 5
+	6 [label="."]
+	5 -> 6
+	7 [label=NNS]
+	3 -> 7
+	8 [label=Offices]
+	7 -> 8
+	9 [label=VBD]
+	4 -> 9
+	10 [label=were]
+	9 -> 10
+	11 [label=ADJP]
+	4 -> 11
+	12 [label=NP]
+	4 -> 12
+	13 [label=VBN]
+	11 -> 13
+	14 [label=closed]
+	13 -> 14
+	15 [label=NN]
+	12 -> 15
+	16 [label=yesterday]
+	15 -> 16
+}

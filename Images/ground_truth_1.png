@@ -1,0 +1,18 @@
+// NNP NNP :
+digraph {
+	1 [label=TOP]
+	2 [label=NP]
+	1 -> 2
+	3 [label=NNP]
+	2 -> 3
+	4 [label=ACCOUNT]
+	3 -> 4
+	5 [label=NNP]
+	2 -> 5
+	6 [label=REVIEW]
+	5 -> 6
+	7 [label=":"]
+	2 -> 7
+	8 [label=":"]
+	7 -> 8
+}

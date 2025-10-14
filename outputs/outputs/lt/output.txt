@@ -1,0 +1,104 @@
+Warning: Cannot change to a different GUI toolkit: gtk. Using notebook instead.
+Using matplotlib backend: nbAgg
+Building the fields
+Namespace(batch_size=128, bos_index=2, buckets=32, clip=5.0, data='data/PTB_LE10', delete={'', ':', "''", '!', ',', '?', 'TOP', '-NONE-', '.', 'S1', '``'}, dev='data/PTB_LE10/dev.pid', device='cuda', draw_pred=False, embed=None, encoder='lstm', eos_index=3, epochs=10, eps=1e-12, equal={'ADVP': 'PRT'}, feat=None, lr=0.002, max_len=None, mbr=True, mu=0.9, n_embed=100, n_labels=59, n_lstm_hidden=200, n_lstm_layers=2, n_tags=46, n_words=1331, nu=0.9, pad_index=0, test='data/PTB_LE10/test.pid', train='data/PTB_LE10/train.pid', unk='unk', unk_index=1, weight_decay=1e-05)
+Building the model
+Model(
+  (word_embed): Embedding(1331, 100)
+  (tag_embed): Embedding(46, 100)
+  (embed_dropout): Dropout(p=0.33, inplace=False)
+  (encoder): LSTM(200, 200, num_layers=2, dropout=0.33, bidirectional=True)
+  (encoder_dropout): Dropout(p=0.33, inplace=False)
+  (mlp_l): MLP(n_in=400, n_out=100, dropout=0.33)
+  (mlp_r): MLP(n_in=400, n_out=100, dropout=0.33)
+  (feat_biaffine): Biaffine(n_in=100, n_out=59, bias_x=True, bias_y=True)
+  (crf): CRFConstituency()
+  (criterion): CrossEntropyLoss()
+)
+
+train: Dataset(n_sentences=2000, n_batches=146, n_buckets=10)
+dev:   Dataset(n_sentences=163, n_batches=15, n_buckets=10)
+test:  Dataset(n_sentences=270, n_batches=18, n_buckets=10)
+
+Epoch 1 / 10:
+0 iter of epoch 1, loss: 6.1163
+50 iter of epoch 1, loss: 2.8522
+100 iter of epoch 1, loss: 1.6480
+dev:  loss: 1.4165 - UCM: 41.10% LCM: 34.97% UP: 86.17% UR: 82.37% UF: 84.23% LP: 80.79% LR: 77.23% LF: 78.97%
+Epoch 1 saved
+dev:  UCM: 41.10% LCM: 34.97% UP: 86.17% UR: 82.37% UF: 84.23% LP: 80.79% LR: 77.23% LF: 78.97%
+0:00:02.170183s elapsed, 0:00:02.170183s/epoch
+Epoch 2 / 10:
+0 iter of epoch 2, loss: 1.7922
+50 iter of epoch 2, loss: 0.7020
+100 iter of epoch 2, loss: 0.7238
+dev:  loss: 0.9947 - UCM: 58.28% LCM: 55.21% UP: 90.74% UR: 89.96% UF: 90.35% LP: 87.04% LR: 86.29% LF: 86.66%
+Epoch 2 saved
+dev:  UCM: 58.28% LCM: 55.21% UP: 90.74% UR: 89.96% UF: 90.35% LP: 87.04% LR: 86.29% LF: 86.66%
+0:00:04.265340s elapsed, 0:00:02.132670s/epoch
+Epoch 3 / 10:
+0 iter of epoch 3, loss: 1.4412
+50 iter of epoch 3, loss: 1.2214
+100 iter of epoch 3, loss: 1.6104
+dev:  loss: 1.1446 - UCM: 60.12% LCM: 56.44% UP: 90.83% UR: 92.17% UF: 91.49% LP: 87.21% LR: 88.49% LF: 87.85%
+Epoch 3 saved
+dev:  UCM: 60.12% LCM: 56.44% UP: 90.83% UR: 92.17% UF: 91.49% LP: 87.21% LR: 88.49% LF: 87.85%
+0:00:06.371102s elapsed, 0:00:02.123701s/epoch
+Epoch 4 / 10:
+0 iter of epoch 4, loss: 1.3410
+50 iter of epoch 4, loss: 0.9128
+100 iter of epoch 4, loss: 0.7641
+dev:  loss: 0.9512 - UCM: 61.35% LCM: 58.28% UP: 93.16% UR: 91.68% UF: 92.41% LP: 89.55% LR: 88.13% LF: 88.83%
+Epoch 4 saved
+dev:  UCM: 61.35% LCM: 58.28% UP: 93.16% UR: 91.68% UF: 92.41% LP: 89.55% LR: 88.13% LF: 88.83%
+0:00:08.462447s elapsed, 0:00:02.115612s/epoch
+Epoch 5 / 10:
+0 iter of epoch 5, loss: 0.5913
+50 iter of epoch 5, loss: 1.5975
+100 iter of epoch 5, loss: 0.9739
+dev:  loss: 0.9334 - UCM: 61.35% LCM: 60.12% UP: 92.04% UR: 92.04% UF: 92.04% LP: 89.11% LR: 89.11% LF: 89.11%
+Epoch 5 saved
+dev:  UCM: 61.35% LCM: 60.12% UP: 92.04% UR: 92.04% UF: 92.04% LP: 89.11% LR: 89.11% LF: 89.11%
+0:00:10.557686s elapsed, 0:00:02.111537s/epoch
+Epoch 6 / 10:
+0 iter of epoch 6, loss: 0.7989
+50 iter of epoch 6, loss: 0.4239
+100 iter of epoch 6, loss: 0.5422
+dev:  loss: 0.8222 - UCM: 68.71% LCM: 65.03% UP: 93.41% UR: 93.76% UF: 93.59% LP: 90.00% LR: 90.33% LF: 90.16%
+Epoch 6 saved
+dev:  UCM: 68.71% LCM: 65.03% UP: 93.41% UR: 93.76% UF: 93.59% LP: 90.00% LR: 90.33% LF: 90.16%
+0:00:12.671264s elapsed, 0:00:02.111877s/epoch
+Epoch 7 / 10:
+0 iter of epoch 7, loss: 0.3257
+50 iter of epoch 7, loss: 0.5292
+100 iter of epoch 7, loss: 0.4630
+dev:  loss: 0.9618 - UCM: 65.64% LCM: 62.58% UP: 92.22% UR: 92.90% UF: 92.56% LP: 88.70% LR: 89.35% LF: 89.02%
+Epoch 6 saved
+dev:  UCM: 68.71% LCM: 65.03% UP: 93.41% UR: 93.76% UF: 93.59% LP: 90.00% LR: 90.33% LF: 90.16%
+0:00:14.848741s elapsed, 0:00:02.121249s/epoch
+Epoch 8 / 10:
+0 iter of epoch 8, loss: 0.5357
+50 iter of epoch 8, loss: 0.5976
+100 iter of epoch 8, loss: 0.3388
+dev:  loss: 0.8468 - UCM: 65.03% LCM: 62.58% UP: 91.95% UR: 93.64% UF: 92.78% LP: 88.94% LR: 90.58% LF: 89.75%
+Epoch 6 saved
+dev:  UCM: 68.71% LCM: 65.03% UP: 93.41% UR: 93.76% UF: 93.59% LP: 90.00% LR: 90.33% LF: 90.16%
+0:00:16.982171s elapsed, 0:00:02.122771s/epoch
+Epoch 9 / 10:
+0 iter of epoch 9, loss: 0.6065
+50 iter of epoch 9, loss: 0.3114
+100 iter of epoch 9, loss: 0.3510
+dev:  loss: 0.8288 - UCM: 69.94% LCM: 66.87% UP: 93.20% UR: 94.00% UF: 93.60% LP: 90.66% LR: 91.43% LF: 91.04%
+Epoch 9 saved
+dev:  UCM: 69.94% LCM: 66.87% UP: 93.20% UR: 94.00% UF: 93.60% LP: 90.66% LR: 91.43% LF: 91.04%
+0:00:19.084368s elapsed, 0:00:02.120485s/epoch
+Epoch 10 / 10:
+0 iter of epoch 10, loss: 0.3547
+50 iter of epoch 10, loss: 0.3642
+100 iter of epoch 10, loss: 0.4277
+dev:  loss: 0.9178 - UCM: 66.26% LCM: 65.64% UP: 93.07% UR: 93.76% UF: 93.41% LP: 90.64% LR: 91.31% LF: 90.98%
+Epoch 9 saved
+dev:  UCM: 69.94% LCM: 66.87% UP: 93.20% UR: 94.00% UF: 93.60% LP: 90.66% LR: 91.43% LF: 91.04%
+0:00:21.201837s elapsed, 0:00:02.120184s/epoch
+[1.416459745168686, 0.9946523457765579, 1.1446409990390143, 0.9511923708021641, 0.9333782533804575, 0.8222117520868778, 0.9617709107076128, 0.8467536039650441, 0.8287782612256706, 0.917797331387798]
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]

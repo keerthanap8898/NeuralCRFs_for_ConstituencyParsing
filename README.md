@@ -133,6 +133,6 @@ It serves as an educational, open-source reference implementation for the Neural
 
 
 ```
-Copyright (C) 2025  Keerthana Purushotham <keerthanap0808@gmail.com>, <kpurusho@ucsd.edu>, <keep.consult@proton.me>.
+Copyright ⓒ 2025  Keerthana Purushotham <keerthanap0808@gmail.com>, <kpurusho@ucsd.edu>, <keep.consult@proton.me>.
 Licensed under MIT. See LICENSE for details.
 ```
